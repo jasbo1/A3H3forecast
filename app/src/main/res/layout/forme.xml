@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainActivity">
+
+    <TextView
+        android:id="@+id/tvDay"
+        style="@style/TextViewBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:maxLength="2"
+        android:maxLines="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMonth"
+        style="@style/TextViewBig"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvDay"
+        app:layout_constraintTop_toTopOf="@+id/tvDay"
+        tools:text="December dfffffffffffffffffffffdffffffffffffffffffffffffffffffdddddddddddddddddddfddddddggg gggggggggggg gf" />
+
+    <TextView
+        android:id="@+id/tvYear"
+        style="@style/TextViewBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="4dp"
+        android:maxLength="4"
+        android:maxLines="1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDay"
+        app:layout_constraintStart_toEndOf="@+id/tvDay"
+        tools:text="2019" />
+
+    <LinearLayout
+        android:id="@+id/liner1"
+        android:layout_width="match_parent"
+        android:layout_height="20sp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tvDay" />
+
+    <ImageView
+        android:id="@+id/imageView0"
+        android:layout_width="10sp"
+        android:layout_height="10sp"
+        android:layout_marginTop="15sp"
+        app:layout_constraintStart_toStartOf="@+id/liner1"
+        app:layout_constraintTop_toBottomOf="@+id/liner1"
+        android:src="@drawable/location"/>
+
+    <TextView
+        android:id="@+id/textBishkek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4sp"
+        android:layout_marginTop="8sp"
+        android:text="Bishkek,KG"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView0"
+        app:layout_constraintTop_toBottomOf="@+id/liner1" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="40dp"
+        android:layout_height="40sp"
+        android:src="@drawable/littlecolud"
+        app:layout_constraintStart_toStartOf="@+id/textBishkek"
+        app:layout_constraintTop_toBottomOf="@+id/textBishkek" />
+
+    <!--<LinearLayout
+        android:id="@+id/liner2"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">-->
+
+    <TextView
+        android:id="@+id/now"
+        style="@style/TextViewSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Now"
+        app:layout_constraintStart_toStartOf="@+id/tvDay"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/today"
+        style="@style/TextViewSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="Today"
+        app:layout_constraintStart_toEndOf="@+id/now"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/nowTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="21"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/now"
+        app:layout_constraintTop_toBottomOf="@+id/now" />
+
+    <TextView
+        android:id="@+id/todayTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/today"
+        app:layout_constraintTop_toBottomOf="@+id/today" />
+    <TextView
+        android:id="@+id/todayTemp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/todayTemp"
+        android:layout_marginStart="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/today" />
+
+    <TextView
+        android:id="@+id/little_Cloud"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/nowTemp"
+        android:text="little Cloud"
+        android:textSize="4dp"
+        app:layout_constraintStart_toStartOf="@+id/nowTemp"/>
+    <TextView
+        android:id="@+id/max"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/nowTemp"
+        android:text="Max"
+        android:textSize="4dp"
+        app:layout_constraintStart_toStartOf="@+id/todayTemp"/>
+    <TextView
+        android:id="@+id/min"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/nowTemp"
+        android:text="Min"
+        android:textSize="4dp"
+        app:layout_constraintStart_toStartOf="@+id/todayTemp2"/>
+
+
+    <TextView
+        android:id="@+id/Wind"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/little_Cloud"
+        android:text="Wind"
+        style="@style/TextViewSmall"
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="@+id/little_Cloud" />
+    <TextView
+        android:id="@+id/Pressure"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/min"
+        android:text="Pressure"
+        style="@style/TextViewSmall"
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="@+id/todayTemp2" />
+
+    <TextView
+        android:id="@+id/wind_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/Wind"
+        android:text="SW 4m/s"
+        android:textStyle="bold"
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="@+id/little_Cloud" />
+
+    <TextView
+        android:id="@+id/pressure_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/Pressure"
+        app:layout_constraintStart_toStartOf="@+id/Pressure" />
+
+
+    <TextView
+        android:id="@+id/humidity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/wind_data"
+        android:text="Humidity"
+        style="@style/TextViewSmall"
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="@+id/Wind" />
+
+    <TextView
+        android:id="@+id/cloudiness"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/pressure_data"
+        android:text="Cloudiness"
+        style="@style/TextViewSmall"
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="@+id/pressure_data" />
+
+    <TextView
+        android:id="@+id/humidity_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/humidity"
+        android:text="81%"
+        android:textStyle="bold"
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="@+id/little_Cloud" />
+
+    <TextView
+        android:id="@+id/cloudiness_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/cloudiness"
+        android:text="100%"
+        android:textStyle="bold"
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="@+id/pressure_data" />
+
+    <TextView
+        android:id="@+id/sunrise"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/humidity_data"
+        android:text="Sunrise"
+        style="@style/TextViewSmall"
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="@+id/Wind" />
+
+    <TextView
+        android:id="@+id/sunset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/cloudiness_data"
+        android:text="Sunset"
+        style="@style/TextViewSmall"
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="@+id/pressure_data" />
+
+    <TextView
+        android:id="@+id/sunrise_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/sunrise"
+        android:text="06:00"
+        android:textStyle="bold"
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="@+id/little_Cloud" />
+    <TextView
+        android:id="@+id/sunset_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/sunset"
+        android:text="20:00"
+        android:textStyle="bold"
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="@+id/Pressure" />
+
+
+    <TextView
+        android:id="@+id/airI"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/sunrise_data"
+        android:text="Air Quality Index"
+        style="@style/TextViewSmall"
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="@+id/little_Cloud" />
+
+    <TextView
+        android:id="@+id/airQ"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/sunset_data"
+        android:text="Air Quality "
+        style="@style/TextViewSmall"
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="@+id/sunset_data" />
+
+    <TextView
+        android:id="@+id/airI_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/airI"
+        android:text="30"
+        android:textStyle="bold"
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="@+id/little_Cloud" />
+    <TextView
+        android:id="@+id/airQ_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/airQ"
+        android:text="Good"
+        android:textStyle="bold"
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="@+id/Pressure" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
