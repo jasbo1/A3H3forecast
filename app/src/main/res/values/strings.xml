@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">OnBoardApp</string>
+    <string name="app_name">Retrofit3.2</string>
     <string name="btn_skip_menu">skip</string>
     <string name="weather_key">4d63c1acf9a085448b23971128e5eddd</string>
-   
+    <string name="forecast">4d63c1acf9a085448b23971128e5eddd</string>
+
 </resources>

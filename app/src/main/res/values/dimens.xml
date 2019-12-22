@@ -2,4 +2,5 @@
 <resources>
     <dimen name="margin_fourty">40dp</dimen>
     <dimen name="margin_twenty">20sp</dimen>
+    <dimen name="margin_eighty">80dp</dimen>
 </resources>

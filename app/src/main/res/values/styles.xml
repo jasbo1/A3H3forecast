@@ -21,4 +21,16 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+
+    <style name="TextViewBigп">
+        <item name="android:textSize">48sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextViewMiddle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
 </resources>
